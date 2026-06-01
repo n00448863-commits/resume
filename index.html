@@ -3,55 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo Bakery</title>
+    <title>Contact Form</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            width:350px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+    </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">NEO BAKERY</div>
+<div class="container">
+    <h2>Contact Me</h2>
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <form action="https://api.web3forms.com/submit" method="POST">
 
-    <section class="hero">
-        <h1>Future Of Bakery</h1>
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
 
-        <p>
-            Premium cakes, pastries, donuts and bakery products
-            designed for the next generation.
-        </p>
+        <input type="text" name="name" placeholder="Your Name" required>
 
-        <button>Order Now</button>
-    </section>
+        <input type="email" name="email" placeholder="Your Email" required>
 
-    <section class="cards">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-        <div class="card">
-            <h2>Cakes</h2>
-            <p>Fresh premium cakes made daily.</p>
-        </div>
+        <button type="submit">Send</button>
 
-        <div class="card">
-            <h2>Donuts</h2>
-            <p>Soft and delicious donuts.</p>
-        </div>
-
-        <div class="card">
-            <h2>Pastries</h2>
-            <p>Luxury bakery experience.</p>
-        </div>
-
-    </section>
-
-    <script src="script.js"></script>
+    </form>
+</div>
 
 </body>
 </html>
